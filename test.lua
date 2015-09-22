@@ -12,6 +12,8 @@ function tests.vl_kmeans_smoke_tests_1()
   local data = torch.rand(N, D):double()
   local kmeans = vlfeat.KMeans()
 
+  tester:asserteq(kmeans:algorithm(), 'LLOYD')
+  tester:asserteq(kmeans:initialization(), 'RAND')
   tester:asserteq(kmeans:numRepetitions(3), 3)
 
   kmeans:cluster(data, K)

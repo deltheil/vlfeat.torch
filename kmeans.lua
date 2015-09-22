@@ -78,8 +78,8 @@ function KMeans:algorithm(value)
       if v == self.handle.algorithm then
         value = k; break
       end
-      assert(value)
     end
+    assert(value)
   end
   return value
 end
@@ -100,8 +100,8 @@ function KMeans:initialization(value)
       if v == self.handle.initialization then
         value = k; break
       end
-      assert(value)
     end
+    assert(value)
   end
   return value
 end
