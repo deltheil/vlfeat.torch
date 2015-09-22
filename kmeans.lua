@@ -14,12 +14,12 @@ local VL_KMEANS_INIT = {
 }
 
 local assert_valid = function(self, tensor)
-  local th = torch.typename(tensor)
+  local th = torch.type(tensor)
   local vl = self.handle.dataType
 
   assert(
     vlfeat.TH_VL_TYPE[th] == vl,
-    'expected ' .. vlfeat.VL_TH_TYPE[vl] .. ', got ' .. tostring(th)
+    'expected ' .. vlfeat.VL_TH_TYPE[vl] .. ', got ' .. th
   )
 
   assert(
