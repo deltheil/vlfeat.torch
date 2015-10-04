@@ -1,6 +1,7 @@
 local KMeans = torch.class('vlfeat.KMeans')
 local ffi    = require 'ffi'
 local C      = vlfeat.C
+local NULL   = vlfeat.NULL
 
 local VL_KMEANS_ALGO = {
   LLOYD                  = C.VlKMeansLloyd,
@@ -194,7 +195,7 @@ end
 
 function KMeans:centers()
   assert(
-    self.handle.centers ~= nil,
+    self.handle.centers ~= NULL,
     'NULL centers'
   )
   local centers = torch.getmetatable(

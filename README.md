@@ -2,6 +2,8 @@
 
 VLFeat (partial) FFI wrapper for Torch7.
 
+Runs with both LuaJIT and Lua 5.1 / 5.2 via [luaffifb](https://github.com/facebook/luaffifb).
+
 ### Install
 
 ```bash

@@ -142,6 +142,11 @@ if not ok then
 end
 vlfeat.C = C
 
+if not jit then
+  -- see https://github.com/facebook/luaffifb#pointer-comparison
+  vlfeat.NULL = ffi.C.NULL
+end
+
 vlfeat.TH_VL_TYPE = {
   ['torch.FloatTensor']  = C.VL_TYPE_FLOAT,
   ['torch.DoubleTensor'] = C.VL_TYPE_DOUBLE

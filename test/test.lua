@@ -15,6 +15,7 @@ function tests.vl_kmeans_smoke_tests_1()
   tester:asserteq(kmeans:algorithm(), 'LLOYD')
   tester:asserteq(kmeans:initialization(), 'RAND')
   tester:asserteq(kmeans:numRepetitions(3), 3)
+  tester:assertErrorPattern(function() kmeans:centers() end, 'NULL centers')
 
   kmeans:cluster(data, K)
 
