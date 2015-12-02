@@ -1,7 +1,7 @@
-require 'torch' -- for `include` and class system
+require 'torch'
 vlfeat = {}     -- top-level module for Torch class system (it MUST be global!)
 
-include 'ffi.lua'
-include 'kmeans.lua'
+require 'vlfeat.ffi'
+require 'vlfeat.kmeans'
 
 return vlfeat
