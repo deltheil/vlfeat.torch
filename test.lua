@@ -1,5 +1,5 @@
-require 'totem'
-require 'vlfeat'
+local totem  = require 'totem'
+local vlfeat = require 'vlfeat'
 
 local tests  = {}
 local tester = totem.Tester()
@@ -57,5 +57,6 @@ function tests.vl_kmeans_smoke_tests_3()
   tester:assertTensorEq(kmeans:centers(), centers)
 end
 
-tester:add(tests)
-return tester:run(tests)
+return function()
+  tester:add(tests):run()
+end

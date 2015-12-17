@@ -1,4 +1,5 @@
-local ffi = require 'ffi'
+local ffi    = require 'ffi'
+local vlfeat = require 'vlfeat.env'
 
 -- host specific typedef-s
 if ffi.abi('64bit') then

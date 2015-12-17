@@ -1,5 +1,4 @@
-require 'torch'
-vlfeat = {}     -- top-level module for Torch class system (it MUST be global!)
+local vlfeat = require 'vlfeat.env'
 
 require 'vlfeat.ffi'
 require 'vlfeat.kmeans'

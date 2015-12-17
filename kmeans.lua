@@ -1,4 +1,6 @@
-local KMeans = torch.class('vlfeat.KMeans')
+local vlfeat = require 'vlfeat.env'
+local torch  = require 'torch'
+local KMeans = torch.class('vlfeat.KMeans', vlfeat)
 local ffi    = require 'ffi'
 local C      = vlfeat.C
 local NULL   = vlfeat.NULL

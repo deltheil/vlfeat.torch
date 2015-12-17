@@ -1,6 +1,6 @@
 ## vlfeat.torch
 
-VLFeat (partial) FFI wrapper for Torch7.
+[VLFeat](http://www.vlfeat.org/) (partial) FFI wrapper for Torch7.
 
 Runs with both LuaJIT and Lua 5.1 / 5.2 via [luaffifb](https://github.com/facebook/luaffifb).
 
@@ -9,6 +9,8 @@ Runs with both LuaJIT and Lua 5.1 / 5.2 via [luaffifb](https://github.com/facebo
 ```bash
 luarocks make
 ```
+
+You can run the tests with `luajit -e "require('vlfeat.test')()"`.
 
 ### Example
 

@@ -17,13 +17,16 @@ exhaustive in terms of API coverage.
 
 dependencies = {
    "torch >= 7.0",
+   "totem",
 }
 
 build = {
    type = "builtin",
    modules = {
       ['vlfeat.init']           = 'init.lua',
+      ['vlfeat.env']            = 'env.lua',
       ['vlfeat.ffi']            = 'ffi.lua',
       ['vlfeat.kmeans']         = 'kmeans.lua',
+      ['vlfeat.test']           = 'test.lua',
    },
 }
