@@ -1,8 +1,7 @@
-local totem  = require 'totem'
 local vlfeat = require 'vlfeat'
 
-local tests  = {}
-local tester = totem.Tester()
+local tests  = torch.TestSuite()
+local tester = torch.Tester()
 
 local N      = 100
 local D      = 64

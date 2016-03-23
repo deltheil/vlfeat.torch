@@ -17,7 +17,6 @@ exhaustive in terms of API coverage.
 
 dependencies = {
    "torch >= 7.0",
-   "totem",
 }
 
 build = {
